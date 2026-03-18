@@ -1,0 +1,35 @@
+## Person 2 Tasks
+
+- Use the data plan already established in `03-FinalProject.ipynb` and do **not** invent a new dataset hierarchy in the back half.
+- Treat `Dataset #1` as the **primary dataset** for the paper:
+  - file: `data/02-processed/social_media_user_activity_cleaned.csv`
+  - passive-use proxy: `time_on_feed_per_day`
+  - active-use proxy: `posts_created_per_week`
+  - primary outcomes: `perceived_stress_score`, `self_reported_happiness`
+  - main controls: age, gender, country, urban/rural setting, income, employment, education, exercise, sleep, weekly work hours
+- Treat the remaining datasets as **supporting only** and do not frame them as equal substitutes for `Dataset #1`.
+- Use the harmonized logic already set up in the notebook:
+  - do **not** row-merge unrelated datasets
+  - compare direction and consistency of associations across datasets
+  - keep all conclusions correlational
+- Recommended supporting-data priority:
+  - strongest supporting dataset: `Dataset #4` -> `data/02-processed/dataset4_smmh_processed.csv`
+  - next best robustness checks: `Dataset #2` -> `data/02-processed/dataset2_social_media_balance_processed.csv` and `Dataset #5` -> `data/02-processed/dataset5_screen_time_mental_wellness_processed.csv`
+  - `Dataset #3` -> `data/02-processed/dataset3_social_media_emotion_processed.csv` should be used only as descriptive context or a light supporting check because `dominant_emotion` is not the same as stress or happiness
+- Use each supporting dataset for what it is actually good at:
+  - `Dataset #4`: passive/exposure style proxies such as `avg_time_hours`, `use_without_purpose`, `social_comparison_1_5`; wellbeing proxies such as `depressed_or_down`, `worry_1_5`, `sleep_issues_1_5`
+  - `Dataset #2`: broader exposure proxy `daily_screen_time_hrs`; wellbeing proxies `stress_level_1_10`, `happiness_index_1_10`, `sleep_quality_1_10`
+  - `Dataset #5`: broader exposure proxies `screen_time_hours`, `leisure_screen_hours`; wellbeing proxies `stress_level_0_10`, `mental_wellness_index_0_100`, `sleep_quality_1_5`
+  - `Dataset #3`: usage intensity `daily_usage_time_minutes`, activity variables such as `posts_per_day` and `messages_sent_per_day`, and the derived `active_interaction_proxy`
+- Replace the placeholder text under `### Exploratory Data Analysis` with a short final-report intro that explains only the EDA that still matters for the story.
+- Keep only the strongest `Dataset #1` figures from `02-EDACheckpoint.ipynb`; remove checkpoint-only side paths and any weak or redundant plots.
+- Make sure every kept figure has nearby interpretation in full sentences, not just a caption or a plot left on its own.
+- Write the main results narrative so `Dataset #1` is clearly the primary evidence source for the project.
+- Use `Analysis 1` as the main results section for the strongest `Dataset #1` findings on passive use, active use, stress, and happiness.
+- Use `Analysis 2` only as a supporting or robustness section; secondary datasets should support the main claim, not compete with `Dataset #1`.
+- Keep the results section explicitly correlational and avoid causal wording.
+- Replace leftover template text in the back half, including the placeholder text in `## Ethics` and `## Discussion and Conclusion`.
+- Write `## Ethics` in final-report tense and discuss realistic concerns such as self-report bias, synthetic or processed data concerns, representation, privacy, and overclaiming from observational data.
+- Write `## Discussion and Conclusion` so it clearly covers the main findings, how the results compare with the hypothesis, how the findings connect back to the literature, the main limitations, and reasonable next steps.
+- Delete `### ETC AD NASEUM` if it is not actually needed in the final notebook.
+- Before submitting, do one cleanup pass on the full back half so there are no placeholders, hanging figures, or checkpoint-style notes left behind.
