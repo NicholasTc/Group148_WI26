@@ -184,3 +184,5 @@ data/*.sq*
 data/*/*.sq*
 data/*.SQ*
 data/*/*.SQ*
+data/00-raw/airline-safety.csv
+data/00-raw/bad-drivers.csv
